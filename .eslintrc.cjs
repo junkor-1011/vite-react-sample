@@ -26,10 +26,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       2,
       {
-        extensions: [
-          '.ts',
-          'tsx',
-        ],
+        extensions: ['.ts', 'tsx'],
       },
     ],
     'react/require-default-props': 'off',
@@ -67,6 +64,7 @@ module.exports = {
         // '**/*.stories.jsx'
       ],
       rules: {
+        'import/no-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
       },
     },
