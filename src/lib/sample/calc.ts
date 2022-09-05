@@ -4,4 +4,4 @@ export const sum = (...args: number[]): number => {
     result += x;
   }
   return result;
-}
+};
