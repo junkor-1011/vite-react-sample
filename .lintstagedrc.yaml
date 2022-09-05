@@ -1,7 +1,7 @@
 'src/**/*.{ts,tsx}':
   - eslint --fix
   - prettier --write
-'*.js':
+'*.{js,cjs}':
   - prettier --write
 '*.{css,less,sass,scss}':
   - stylelint --fix
