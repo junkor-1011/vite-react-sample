@@ -1,8 +1,20 @@
 // Vitest Snapshot v1
 
 exports[`snapshot test > App Component 1`] = `
+.emotion-0 {
+  font-weight: bold;
+}
+
+.emotion-1 {
+  color: green;
+}
+
+.emotion-2 {
+  color: blue;
+}
+
 <div
-  class="App css-7zpn40-App"
+  class="App emotion-0"
 >
   <div>
     <a
@@ -36,14 +48,14 @@ exports[`snapshot test > App Component 1`] = `
   >
     <button>
       <p
-        class="css-1xld1s0-App"
+        class="emotion-1"
       >
         count is 
         0
       </p>
     </button>
     <p
-      class="css-1o8fitp-App"
+      class="emotion-2"
     >
       Edit 
       <code>
