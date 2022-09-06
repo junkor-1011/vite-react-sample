@@ -3,7 +3,11 @@ import { css } from '@emotion/react';
 import reactLogo from './assets/react.svg';
 import './App.scss';
 
-const styles = css`
+const textBoldStyle = css({
+  fontWeight: 'bold',
+});
+
+const greenStyle = css`
   color: green;
 `;
 
@@ -11,7 +15,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="App" css={textBoldStyle}>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -23,7 +27,7 @@ const App: React.FC = () => {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          <p css={styles}>count is {count}</p>
+          <p css={greenStyle}>count is {count}</p>
         </button>
         <p css={{ color: 'blue' }}>
           Edit <code>src/App.tsx</code> and save to test HMR
