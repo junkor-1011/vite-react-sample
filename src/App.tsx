@@ -1,6 +1,11 @@
 import { useState } from 'react';
+import { css } from '@emotion/react';
 import reactLogo from './assets/react.svg';
 import './App.scss';
+
+const styles = css`
+  color: green;
+`;
 
 const App: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -17,8 +22,10 @@ const App: React.FC = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
+        <button onClick={() => setCount((count) => count + 1)}>
+          <p css={styles}>count is {count}</p>
+        </button>
+        <p css={{ color: 'blue' }}>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>

@@ -20,7 +20,7 @@ module.exports = {
     sourceType: 'module',
     project: 'tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'testing-library'],
+  plugins: ['react', '@typescript-eslint', 'testing-library', '@emotion'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [
@@ -41,6 +41,8 @@ module.exports = {
         json: 'always',
       },
     ],
+    // @emotion/react
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
   },
   overrides: [
     {
@@ -66,6 +68,7 @@ module.exports = {
       rules: {
         'import/no-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
+        '@emotion/jsx-import': 'error',
       },
     },
   ],
