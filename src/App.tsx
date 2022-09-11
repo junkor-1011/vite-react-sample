@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App" css={textBoldStyle}>
+    <div className="App" css={textBoldStyle} data-testid="App">
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
