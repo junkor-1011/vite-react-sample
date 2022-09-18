@@ -1,3 +1,5 @@
+const path = require('path');
+const { loadConfigFromFile, mergeConfig } = require('vite');
 const react = require('@vitejs/plugin-react');
 
 module.exports = {
@@ -32,6 +34,16 @@ module.exports = {
       }),
     );
 
-    return config;
+    // return config;
+
+    const { config: userConfig } = await loadConfigFromFile(
+      path.resolve(__dirname, '../vite.config.ts'),
+    );
+
+    return mergeConfig(config, {
+      ...userConfig,
+      // manually specify plugins to avoid conflict
+      plugins: [],
+    });
   },
 };

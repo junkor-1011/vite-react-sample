@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import path from 'path';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -12,8 +13,12 @@ export default defineConfig({
     environment: 'jsdom',
   },
   resolve: {
-    alias: {
-      "@/": `${__dirname}/src/`,
-    },
-  },
-})
+    alias: [
+      // "@/": `${__dirname}/src/`,
+      {
+        find: "@",
+        replacement: path.resolve(__dirname, "./src"),
+      },
+    ],
+    
+}})
