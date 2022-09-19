@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import reactLogo from './assets/react.svg';
 import './App.scss';
+import Clock from '@/components/atoms/Clock';
 
 const textBoldStyle = css({
   fontWeight: 'bold',
@@ -34,6 +35,9 @@ const App: React.FC = () => {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <div>
+        <Clock css={{ color: 'blue', fontWeight: 'bold' }} />
+      </div>
     </div>
   );
 };

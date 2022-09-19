@@ -13,6 +13,11 @@ exports[`snapshot test > App Component 1`] = `
   color: blue;
 }
 
+.emotion-3 {
+  color: blue;
+  font-weight: bold;
+}
+
 <div
   class="App emotion-0"
   data-testid="App"
@@ -70,5 +75,12 @@ exports[`snapshot test > App Component 1`] = `
   >
     Click on the Vite and React logos to learn more
   </p>
+  <div>
+    <span
+      class="emotion-3"
+    >
+      2022/9/18 17:52:10
+    </span>
+  </div>
 </div>
 `;
