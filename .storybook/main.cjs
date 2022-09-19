@@ -3,6 +3,7 @@ const { loadConfigFromFile, mergeConfig } = require('vite');
 const react = require('@vitejs/plugin-react');
 
 module.exports = {
+  staticDirs: ['../public'],
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
