@@ -22,7 +22,10 @@ export const SuccessBehavier: ComponentStory<typeof ClientIpv4> = (args) => (
 SuccessBehavier.parameters = {
   msw: {
     handlers: [
-      rest.get('https://checkip.amazonaws.com', (req, res, ctx) => res(ctx.text(`${dummyIp}\n`))),
+      rest.get('https://checkip.amazonaws.com', async (req, res, ctx) => {
+        await new Promise((resolve) => setTimeout(resolve, 300)); // wait 0.3 sec
+        return await res(ctx.text(`${dummyIp}\n`));
+      }),
     ],
   },
 };
@@ -32,7 +35,12 @@ export const FailureBehavier: ComponentStory<typeof ClientIpv4> = (args) => (
 );
 FailureBehavier.parameters = {
   msw: {
-    handlers: [rest.get('https://checkip.amazonaws.com', (req, res, ctx) => res(ctx.status(403)))],
+    handlers: [
+      rest.get('https://checkip.amazonaws.com', async (req, res, ctx) => {
+        await new Promise((resolve) => setTimeout(resolve, 300)); // wait 0.3 sec
+        return await res(ctx.status(403));
+      }),
+    ],
   },
 };
 
