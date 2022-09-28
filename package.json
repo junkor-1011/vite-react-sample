@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=16.17.1"
   },
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "pnpm@7.12.2",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -23,7 +23,7 @@
     "unit:ui": "vitest --ui",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 --no-open",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
