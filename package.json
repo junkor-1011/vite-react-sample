@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=16.17.1"
   },
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.13.3",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
-    "axios": "^0.27.2",
+    "axios": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -40,7 +40,7 @@
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
-    "@storybook/builder-vite": "^0.2.3",
+    "@storybook/builder-vite": "^0.2.4",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
@@ -49,11 +49,11 @@
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@vitejs/plugin-react": "^2.1.0",
-    "@vitest/ui": "^0.23.4",
+    "@vitest/ui": "^0.24.0",
     "babel-loader": "^8.2.5",
-    "eslint": "^8.24.0",
+    "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -61,14 +61,14 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react": "^7.31.9",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.4",
-    "eslint-plugin-testing-library": "^5.7.0",
+    "eslint-plugin-testing-library": "^5.7.2",
     "husky": "^8.0.1",
-    "jsdom": "^20.0.0",
+    "jsdom": "^20.0.1",
     "lint-staged": "^13.0.3",
-    "msw": "^0.47.3",
+    "msw": "^0.47.4",
     "msw-storybook-addon": "^1.6.3",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
@@ -79,8 +79,8 @@
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.8.4",
-    "vite": "^3.1.4",
-    "vitest": "^0.23.4"
+    "vite": "^3.1.6",
+    "vitest": "^0.24.0"
   },
   "msw": {
     "workerDirectory": "public"
