@@ -14,11 +14,10 @@ export default defineConfig({
   },
   resolve: {
     alias: [
-      // "@/": `${__dirname}/src/`,
       {
         find: "@",
         replacement: path.resolve(__dirname, "./src"),
       },
     ],
-    
-}})
+  }
+})
