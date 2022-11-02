@@ -1,4 +1,8 @@
-module.exports = {
+// @ts-check
+const { builtinModules } = require('node:module');
+const { defineConfig } = require('eslint-define-config');
+
+module.exports = defineConfig({
   env: {
     browser: true,
     es2021: true,
@@ -72,4 +76,4 @@ module.exports = {
       },
     },
   ],
-};
+});
