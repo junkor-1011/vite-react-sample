@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, act, screen, cleanup } from '@testing-library/react';
+import { expect } from 'vitest';
 import Clock from '.';
 
 /** 2022-09-18T08:52:10Z */
@@ -61,6 +62,9 @@ describe('Clock', () => {
       new Date(dummyTime).toLocaleString(),
     );
 
-    expect(screen.getByTestId('style-test')).toHaveStyle({ color: 'red', fontWeight: 'bold' });
+    expect(screen.getByTestId('style-test')).toHaveStyle({
+      color: 'rgb(255, 0, 0)',
+      fontWeight: 'bold',
+    });
   });
 });

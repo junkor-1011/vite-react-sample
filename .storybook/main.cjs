@@ -1,7 +1,6 @@
-const path = require('path');
+const path = require('node:path');
 const { loadConfigFromFile, mergeConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
-
+const react = require('@vitejs/plugin-react-swc');
 module.exports = {
   staticDirs: ['../public'],
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -13,9 +12,9 @@ module.exports = {
     '@storybook/preset-scss',
     'storybook-addon-pseudo-states',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
   features: {
     storyStoreV7: true,
@@ -24,7 +23,6 @@ module.exports = {
     config.plugins = config.plugins.filter(
       (plugin) => !(Array.isArray(plugin) && plugin[0]?.name.includes('vite:react')),
     );
-
     config.plugins.push(
       react({
         exclude: [/\.stories\.(t|j)sx?$/, /node_modules/],
@@ -40,11 +38,13 @@ module.exports = {
     const { config: userConfig } = await loadConfigFromFile(
       path.resolve(__dirname, '../vite.config.ts'),
     );
-
     return mergeConfig(config, {
       ...userConfig,
       // manually specify plugins to avoid conflict
       plugins: [],
     });
+  },
+  docs: {
+    autodocs: true,
   },
 };
