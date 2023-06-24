@@ -8,7 +8,11 @@ export interface UseCounterReturnType {
 
 export default function useCounter(initial: number = 0): UseCounterReturnType {
   const [count, setCount] = useState(initial);
-  const increment = useCallback(() => setCount((x) => x + 1), []);
-  const reset = useCallback(() => setCount(initial), [initial]);
+  const increment = useCallback(() => {
+    setCount((x) => x + 1);
+  }, []);
+  const reset = useCallback(() => {
+    setCount(initial);
+  }, [initial]);
   return { count, increment, reset };
 }

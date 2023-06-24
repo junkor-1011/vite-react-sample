@@ -15,8 +15,12 @@ export const useClientIpv4 = (): Ipv4Result => {
       .get<string>('https://checkip.amazonaws.com')
       .then((res) => res.data)
       .then((data) => data.trim())
-      .then((data) => setIpv4(data))
-      .catch(() => setIpv4(null));
+      .then((data) => {
+        setIpv4(data);
+      })
+      .catch(() => {
+        setIpv4(null);
+      });
   }, []);
 
   return ipv4;

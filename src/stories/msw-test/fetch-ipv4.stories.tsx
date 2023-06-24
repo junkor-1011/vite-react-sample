@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/return-await */
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { rest } from 'msw';
 
 import { ClientIpv4 } from './fetch-ipv4';

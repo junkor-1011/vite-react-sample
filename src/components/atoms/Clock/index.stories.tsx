@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   // ComponentStory,
-  ComponentMeta,
+  type ComponentMeta,
 } from '@storybook/react';
 import Clock from '.';
 

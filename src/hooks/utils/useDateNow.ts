@@ -8,7 +8,9 @@ const useDateNow = (): Date => {
       setDatetime(new Date());
     }, 1000);
 
-    return () => clearInterval(id);
+    return () => {
+      clearInterval(id);
+    };
   }, []);
 
   return datetime;

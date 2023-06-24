@@ -15,8 +15,8 @@ import { useClientIpv4 } from './clientIp';
 const dummyIp = '234.192.0.2';
 
 const server = setupServer(
-  rest.get('https://checkip.amazonaws.com', (req, res, ctx) => {
-    return res(ctx.text(`${dummyIp}\n`));
+  rest.get('https://checkip.amazonaws.com', async (req, res, ctx) => {
+    return await res(ctx.text(`${dummyIp}\n`));
   }),
 );
 
@@ -43,8 +43,8 @@ describe('useClientIpv4', () => {
   });
   it('error', async () => {
     server.use(
-      rest.get('https://checkip.amazonaws.com', (req, res, ctx) => {
-        return res(ctx.status(500));
+      rest.get('https://checkip.amazonaws.com', async (req, res, ctx) => {
+        return await res(ctx.status(500));
       }),
     );
     const { result } = renderHook(() => useClientIpv4());
